@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="5dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_background"
+                android:gravity="center"
+                android:layout_marginVertical="6dp"
+                android:textColor="#000"
+                android:elevation="4dp"
+                android:shadowColor="@color/black"
+                android:minHeight="?actionBarSize"
+                android:padding="@dimen/appbar_padding"
+                android:text="Meeting Details"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/mDate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:paddingStart="16dp"
+                    android:text="Date:"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_height="50dp"
+                    android:drawableEnd="@drawable/ic_baseline_calendar_today_24"
+                    android:drawableTint="@color/black"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:hint="DD/MM/YYYY"
+                    android:inputType="date"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:paddingStart="16dp"
+                    android:text="Time:"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:drawableRight="@drawable/ic_baseline_access_time_24"
+                    android:drawableTint="@color/black"
+                    android:padding="5dp"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="hh:mm"
+                    android:textColor="@color/black"
+                    android:inputType="time"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Why You want This Meeting?"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold|italic"/>
+
+            <EditText
+                android:id="@+id/txtAgenda"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:hint="Reason for your the meeting..."
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="text"/>
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Add Meeting Schedule"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textStyle="italic"
+                android:background="@drawable/btn_bg"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
